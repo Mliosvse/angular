@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="AppController">
+<head>
+    <meta charset="UTF-8">
+    <!--设置视口 当前项目是运行到手机端-->
+    <meta name="viewport" content="width=device-width maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+    <title ng-bind="title"></title>
+</head>
+<body>
+<!--导航-->
+<znav></znav>
+<!--列表-->
+<div ng-show="type=='今日一刻'" ui-view="home"></div>
+<div ng-show="type=='作者'" ui-view="author"></div>
+<div ng-show="type=='栏目'" ui-view="content"></div>
+<div ng-show="type=='我的'" ui-view="my"></div>
+<!--标签切换-->
+<tabbar></tabbar>
+<!--设置页面字体大小适配移动端-->
+<script>
+    var fontSize = window.screen.width / 10 + 'px';
+    document.getElementsByTagName('html')[0].style.fontSize = fontSize;
+</script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="content" ng-repeat="(index,item) in res" ui-sref="app.detail({id:index})">
+    <div class="all">
+    <p class="tip" ng-bind="item.column.name"></p>
+    <h2 ng-bind="item.title"></h2>
+    </div>
+    <div ng-if="item.display_style=='10002'" class="pos1 clearfix">
+        <p ng-bind="item.abstract"></p>
+        <img src="images/post_1.png" alt="">
+    </div>
+    <p ng-if="item.display_style=='10001'" class="pos2" ng-bind="item.abstract"></p>
+    <div ng-if="item.display_style=='10003'" class="pos3">
+        <p class="tip"></p>
+        <ul>
+            <li><img src="images/post_3.png" alt=""></li>
+            <li><img src="images/post_4.png" alt=""></li>
+            <li><img src="images/post_5.png" alt=""></li>
+        </ul>
+    </div>
+</div>

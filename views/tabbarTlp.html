@@ -1,0 +1,18 @@
+<ul class="tabar">
+    <li ng-class="{'active':type=='今日一刻'}" ng-click="tabChange('home')" ui-sref="home">
+        <p><img ng-src="images/{{type=='今日一刻'?'homeSel.png':'home_icon.png'}}" alt=""></p>
+        首页
+    </li>
+    <li ng-class="{'active':type=='作者'}" ng-click="tabChange('author')" ui-sref="author">
+        <p><img ng-src="images/{{type=='作者'?'authorSel.png':'author_icon.png'}}" alt=""></p>
+        作者
+    </li>
+    <li ng-class="{'active':type=='栏目'}" ng-click="tabChange('content')" ui-sref="content">
+        <p><img ng-src="images/{{type=='栏目'?'contentSel.png':'content_icon.png'}}" alt=""></p>
+        栏目
+    </li>
+    <li ng-class="{'active':type=='我的'}" ng-click="tabChange('my')" ui-sref="my">
+        <p><img ng-src="images/{{type=='我的'?'mySel.png':'my_icon.png'}}" alt=""></p>
+        我的
+    </li>
+</ul>
